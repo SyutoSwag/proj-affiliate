@@ -1,0 +1,52 @@
+# Node modules and build output
+node_modules/
+dist/
+.next/
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables and secrets
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+
+# Prisma
+backend/prisma/.env
+backend/.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+*.log
+
+# VSCode
+.vscode/
+
+# Frontend build
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+
+# Backend build
+backend/dist/
+backend/node_modules/
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Task files
+tasks.json
+tasks/ 
