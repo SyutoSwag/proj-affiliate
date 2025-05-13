@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #00D2BE;
+  color: #fff;
+  padding: 0.75rem 2rem;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 2rem;
+}
+
+.navbar nav a {
+  color: #fff;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #23263a;
+  color: #fff;
+  padding: 2rem 1rem 2rem 2rem;
+  min-height: 100vh;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar strong {
+  display: block;
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.sidebar .active {
+  color: #00D2BE;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 3rem;
+}
+
+.feedback-bar {
+  background: #fffbe6;
+  border: 1px solid #ffe58f;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.dashboard-widgets {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.widget {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  min-width: 180px;
+  text-align: center;
+}
+
+.dashboard-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.metric-up {
+  color: #52c41a;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+}
+
+.calculator {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.calculator form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.calculator input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 200px;
+} 
