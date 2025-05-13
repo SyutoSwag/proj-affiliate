@@ -1,0 +1,56 @@
+# Product Requirements Document (PRD)
+
+## Project Title
+Affiliate Management Platform Website
+
+## Overview
+Build a web-based platform to manage affiliate partners, streamline registration, and provide both partners and administrators with the tools needed for effective affiliate program management. The platform will be divided into three main sections: Registration Interface, Affiliate Partner Backend, and Affiliate Management Interface. Data tracking is not required at this stage.
+
+## Goals
+- Enable new users to register and log in securely
+- Provide affiliate partners with a dashboard, access to links, creatives, and payment info
+- Allow management to oversee affiliates, materials, and payment records
+- Deliver a fully functional operational platform (no data tracking required yet)
+
+## Features & Requirements
+
+### 1. Registration Interface
+- User registration form (account, password, required info)
+- Secure login/logout functionality
+- Store registration info in the system for later use
+- Basic validation and error handling
+
+### 2. Affiliate Partner Backend Interface
+- Dashboard with summary of key data (e.g., earnings, clicks, conversions)
+- Access to unique affiliate links
+- Downloadable ad creatives (banners, text, etc.)
+- View payment information and history
+- Profile management (update account info, change password)
+
+### 3. Affiliate Management Interface (Admin)
+- Manage downloadable materials for partners (upload, edit, remove)
+- View all affiliate partner data and information
+- Track and display detailed payment records for each affiliate
+- Search/filter affiliates by status, name, or other criteria
+
+## Non-Goals
+- No need to implement data tracking (e.g., click/conversion tracking) at this stage
+- No need for advanced analytics or reporting
+
+## Technical Requirements
+- Modern web framework (React, Next.js, or similar)
+- Backend with authentication and data storage (Node.js, Express, or similar)
+- Database (PostgreSQL, MySQL, or similar)
+- Responsive design for desktop and mobile
+- Basic security best practices (password hashing, input validation)
+
+## References
+- System architecture and sample pages (see attached)
+
+## Deliverables
+- Fully functional web platform with the above features
+- Clean, maintainable codebase
+- Documentation for setup and usage
+
+## Timeline
+- To be determined based on team capacity and priorities 

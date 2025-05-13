@@ -1,0 +1,60 @@
+// Prisma schema for Affiliate Management Platform
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  role      String   // 'affiliate' or 'admin'
+  affiliate Affiliate?
+  createdAt DateTime @default(now())
+}
+
+model Affiliate {
+  id         Int      @id @default(autoincrement())
+  userId     Int      @unique
+  user       User     @relation(fields: [userId], references: [id])
+  links      Link[]
+  payments   Payment[]
+  creatives  Creative[]
+  profile    String?
+  status     String   // e.g., 'active', 'inactive'
+  createdAt  DateTime @default(now())
+}
+
+model Link {
+  id           Int        @id @default(autoincrement())
+  affiliateId  Int
+  url          String
+  createdAt    DateTime   @default(now())
+  affiliate    Affiliate  @relation(fields: [affiliateId], references: [id])
+}
+
+model Creative {
+  id           Int        @id @default(autoincrement())
+  affiliateId  Int?
+  url          String
+  type         String     // e.g., 'banner', 'text'
+  description  String?
+  uploadedBy   Int        // userId of uploader
+  createdAt    DateTime   @default(now())
+  affiliate    Affiliate? @relation(fields: [affiliateId], references: [id])
+}
+
+model Payment {
+  id           Int        @id @default(autoincrement())
+  affiliateId  Int
+  amount       Float
+  status       String     // e.g., 'pending', 'paid'
+  paidAt       DateTime?
+  createdAt    DateTime   @default(now())
+  affiliate    Affiliate  @relation(fields: [affiliateId], references: [id])
+} 
